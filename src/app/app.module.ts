@@ -12,11 +12,17 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatBadgeModule } from "@angular/material/badge";
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatInputModule } from "@angular/material/input";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 
 import { TodoService } from "./services/todo.service";
 import { HttpClientModule } from "@angular/common/http";
-import { FinalizadosComponent } from './components/finalizados/finalizados.component';
+import { FinalizadosComponent } from "./components/finalizados/finalizados.component";
+import { CreateComponent } from "./components/create/create.component";
+import { FormsModule } from "@angular/forms";
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,8 @@ import { FinalizadosComponent } from './components/finalizados/finalizados.compo
     FooterComponent,
     ReadAllComponent,
     FinalizadosComponent,
+    CreateComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,11 @@ import { FinalizadosComponent } from './components/finalizados/finalizados.compo
     MatIconModule,
     MatBadgeModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [TodoService],
   bootstrap: [AppComponent],

@@ -1,0 +1,31 @@
+<form>
+    <h1>Edição da tarefa</h1>
+
+    <mat-form-field class="data-finalizar">
+        <mat-label>Data para finalizar</mat-label>
+        <input [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" matInput [matDatepicker]="dp3"
+            disabled>
+        <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+
+    <div class="forms">
+        <mat-form-field class="form">
+            <mat-label>Titulo</mat-label>
+            <input [(ngModel)]="todo.titulo" name="todo.titulo" matInput placeholder="Ex. Spring">
+        </mat-form-field>
+        <mat-form-field class="form">
+            <mat-label>Descrição</mat-label>
+            <input [(ngModel)]="todo.descricao" name="todo.descricao" matInput placeholder="Ex. Estudar Sprint Boot">
+        </mat-form-field>
+    </div>
+
+    <div class="buttons">
+        <button mat-stroked-button color="primary" (click)="update()">
+            Salvar
+        </button>
+        <button mat-stroked-button color="warn" (click)="cancel()">
+            Cancelar
+        </button>
+    </div>
+</form>
