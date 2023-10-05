@@ -11,8 +11,12 @@ import { ReadAllComponent } from "./components/read-all/read-all.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { MatBadgeModule } from "@angular/material/badge";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import { TodoService } from "./services/todo.service";
 import { HttpClientModule } from "@angular/common/http";
+import { FinalizadosComponent } from './components/finalizados/finalizados.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,7 @@ import { HttpClientModule } from "@angular/common/http";
     HeaderComponent,
     FooterComponent,
     ReadAllComponent,
+    FinalizadosComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import { HttpClientModule } from "@angular/common/http";
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    HttpClientModule
+    MatBadgeModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent],
